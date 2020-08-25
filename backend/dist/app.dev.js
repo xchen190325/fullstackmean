@@ -4,15 +4,15 @@ var express = require("express");
 
 var bodyParser = require("body-parser");
 
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
-var Post = require('./models/post');
+var Post = require("./models/post");
 
 var app = express();
-mongoose.connect('mongodb+srv://admin:admin@cluster0.lsik3.mongodb.net/angular-test?retryWrites=true&w=majority').then(function () {
-  console.log('Connected to mongoDB altas');
+mongoose.connect("mongodb+srv://admin:admin@cluster0.lsik3.mongodb.net/test?retryWrites=true&w=majority").then(function () {
+  console.log("Connected to database!");
 })["catch"](function () {
-  console.log('Connection to MongoDB failed.');
+  console.log("Connection failed!");
 });
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -29,12 +29,11 @@ app.post("/api/posts", function (req, res, next) {
     title: req.body.title,
     content: req.body.content
   });
-  post.save().then(function (result) {
-    console.log(result + "hello");
-  });
-  console.log(post);
-  res.status(201).json({
-    message: 'Post added successfully'
+  post.save().then(function (createdPost) {
+    res.status(201).json({
+      message: "Post added successfully",
+      postId: createdPost._id
+    });
   });
 });
 app.get("/api/posts", function (req, res, next) {
@@ -45,15 +44,14 @@ app.get("/api/posts", function (req, res, next) {
     });
   });
 });
-app["delete"]('/api/posts/:id', function (req, res, next) {
-  console.log(req.params.id);
+app["delete"]("/api/posts/:id", function (req, res, next) {
   Post.deleteOne({
     _id: req.params.id
   }).then(function (result) {
-    console.log("Delete successed " + result.content);
-  });
-  res.status(200).json({
-    message: "Post Deleted!"
+    console.log(result);
+    res.status(200).json({
+      message: "Post deleted!"
+    });
   });
 });
 module.exports = app;
