@@ -9,8 +9,11 @@ exports.__esModule = true;
 exports.AppNewsComponent = void 0;
 var core_1 = require("@angular/core");
 var AppNewsComponent = /** @class */ (function () {
-    function AppNewsComponent(newsapi) {
+    function AppNewsComponent(newsapi, authService, route) {
         this.newsapi = newsapi;
+        this.authService = authService;
+        this.route = route;
+        this.isAuthenticated = false;
         console.log('app component constructor called');
     }
     AppNewsComponent.prototype.ngOnInit = function () {
@@ -19,6 +22,20 @@ var AppNewsComponent = /** @class */ (function () {
         this.newsapi.initArticles().subscribe(function (data) { return _this.mArticles = data['articles']; });
         //load news sources
         this.newsapi.initSources().subscribe(function (data) { return _this.mSources = data['sources']; });
+        this.userSub = this.authService.user.subscribe(function (user) {
+            _this.isAuthenticated = !!user;
+            console.log(!user);
+            console.log(!!user);
+        });
+    };
+    AppNewsComponent.prototype.onLogin = function () {
+        this.route.navigate(['auth']);
+    };
+    AppNewsComponent.prototype.onLogout = function () {
+        this.authService.logout();
+    };
+    AppNewsComponent.prototype.ngOnDestroy = function () {
+        this.userSub.unsubscribe();
     };
     AppNewsComponent.prototype.searchArticles = function (source) {
         var _this = this;

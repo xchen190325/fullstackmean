@@ -5,6 +5,7 @@
   a{
       color:white;
       margin: 10px;
+      list-style: none;
   }
   a:hover{
     color:rgb(212, 152, 40);
