@@ -1,0 +1,96 @@
+<div class="row " style="color:black; background:slategray">
+  <div class="col-md-8 offset-md-2">
+    <blockquote class="blockquote">
+      <p class="mb-0 h3 display-4">User Page</p>
+    </blockquote>
+  </div>
+</div>
+<router-outlet></router-outlet>
+<p>
+
+</p>
+<div class="card" style="background-color: transparent" >
+  <div class="card-header" style="color: black;font-family:georgia,garamond,serif;font-style:italic;font-size: x-large;">
+    Quote of the Day
+  </div>
+  <div class="card-body" style="background-color:white;">
+    <blockquote class="blockquote mb-0">
+      <p>We can secure other people’s approval if we do right and try hard; but our own is worth a hundred of it, and no way has been found out of securing that.</p>
+      <footer class="blockquote-footer" style="color: black;">Mark Twain</footer>
+    </blockquote>
+  </div>
+</div>
+
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+
+<div class="container" style="background: white">
+  <div class="card">
+     <div class="cardheader" style="color: black;font-family:georgia,garamond,serif;font-style:italic;font-size: x-large;">
+        <p>User Profile</p>
+      </div>
+        <img class="img-responsive" [src]= "imageList[imageList.length -1].imageUrl" alt="Chania" width="250" height="340">
+      <div class="info">
+        <div class="title">
+          <a target="_blank" href="http://localhost:4200/userpage/upload">Upload a Profile Picture</a>
+        </div>
+            <div class="desc"> Curious Developer </div>
+            <div class="desc"> RockStar Apprentice </div>
+            <div class="desc"> Caffeine Enthusiast </div>
+      </div>
+        <div class="bottom">
+           <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com">
+            <i class="fa fa-twitter"></i>
+            </a>
+            <a class="btn btn-danger btn-sm" rel="publisher"
+              href="https://myaccount.google.com">
+              <i class="fa fa-google"></i>
+            </a>
+            <a class="btn btn-primary btn-sm" rel="publisher"
+              href="https://www.facebook.com">
+                <i class="fa fa-facebook"></i>
+            </a>
+            <a class="btn btn-danger btn-sm" rel="publisher" href="https://www.instagram.com">
+              <i class="fa fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+  </div>
+<p>
+
+
+
+</p>
+<div class="container" style="background:white">
+  <div class="row col-md-8 offset-md-2 ">
+    <blockquote class="blockquote mb-0">
+      <p>What we think you might be interested</p>
+      <footer class="blockquote-footer" style="color: black;">Click on the Images to find more.</footer>
+    </blockquote>
+  </div>
+</div>
+
+  <div class="row col-md-8 offset-md-2 ">
+      <div id="mdb-lightbox-ui"></div>
+      <div class="mdb-lightbox no-margin">
+        <figure class="col-md-3">
+          <a href="https://apnews.com/97a0700564fb52d7f664d8de22066f88">
+            <img alt="picture" src="https://storage.googleapis.com/afs-prod/media/43b4fb90b80440a7852f48d150ea85db/800.jpeg"
+              class="img-fluid" width="300" height="200">
+          </a>
+        </figure>
+
+        <figure class="col-md-3">
+          <a href="https://apnews.com/128e3f59392b5ed6ef249f33e3b5c56a">
+            <img alt="picture" src="https://storage.googleapis.com/afs-prod/media/f7de12cdd9e74606b1892cc87f29f978/2000.jpeg"
+              class="img-fluid" width="300" height="200">
+          </a>
+        </figure>
+        <figure class="col-md-3">
+          <a href="https://apnews.com/f97e764bd59304462c10e483036bef73">
+            <img alt="picture" src="https://storage.googleapis.com/afs-prod/media/4a722c751cec482aa4913d48ef8c5a01/1920.jpeg"
+              class="img-fluid" width="300" height="200">
+          </a>
+        </figure>
+      </div>
+  </div>

@@ -13,13 +13,19 @@ var auth_component_1 = require("./auth/auth.component");
 var news_component_1 = require("./news/news.component");
 var comment_create_component_1 = require("./news/comments/comment-create/comment-create.component");
 var sms_send_component_1 = require("./sms-send/sms-send.component");
+var userpage_component_1 = require("./userpage/userpage.component");
+var image_component_1 = require("./userpage/image/image.component");
 var appRoutes = [
     { path: '', component: auth_component_1.AuthComponent },
     { path: 'auth', component: auth_component_1.AuthComponent },
     { path: 'news', component: news_component_1.AppNewsComponent },
     { path: 'login', component: auth_component_1.AuthComponent },
     { path: 'post', component: comment_create_component_1.CommentCreateComponent },
-    { path: 'sms', component: sms_send_component_1.SmsSendComponent }
+    { path: 'sms', component: sms_send_component_1.SmsSendComponent },
+    { path: 'userpage', component: userpage_component_1.UserpageComponent, children: [
+            { path: 'upload', component: image_component_1.ImageComponent }
+        ]
+    }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

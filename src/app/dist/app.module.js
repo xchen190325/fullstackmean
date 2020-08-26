@@ -37,6 +37,12 @@ var post_list_component_1 = require("./news/posts/post-list/post-list.component"
 var sms_send_component_1 = require("./sms-send/sms-send.component");
 var sms_send_component_2 = require("./sms-send/sms-send.component");
 var dialog_1 = require("@angular/material/dialog");
+var userpage_component_1 = require("./userpage/userpage.component");
+var image_component_1 = require("./userpage/image/image.component");
+var fire_1 = require("@angular/fire");
+var storage_1 = require("@angular/fire/storage");
+var environment_1 = require("../environments/environment");
+var database_1 = require("@angular/fire/database");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -44,6 +50,8 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 app_component_1.AppComponent,
+                image_component_1.ImageComponent,
+                userpage_component_1.UserpageComponent,
                 sms_send_component_1.SmsSendComponent,
                 post_list_component_1.PostListComponent,
                 dropdown_directive_1.DropdownDirective,
@@ -57,6 +65,9 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 platform_browser_1.BrowserModule,
+                fire_1.AngularFireModule.initializeApp(environment_1.environment.firebaseConfig),
+                storage_1.AngularFireStorageModule,
+                database_1.AngularFireDatabaseModule,
                 ng_bootstrap_1.NgbPaginationModule,
                 ng_bootstrap_1.NgbAlertModule,
                 expansion_1.MatExpansionModule,

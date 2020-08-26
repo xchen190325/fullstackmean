@@ -27,10 +27,18 @@ import { PostCreateComponent } from './news/posts/post-create/post-create.compon
 import { PostListComponent } from './news/posts/post-list/post-list.component';
 import { SmsSendComponent } from './sms-send/sms-send.component'
 import { DialogOverviewExampleDialog } from './sms-send/sms-send.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { UserpageComponent } from './userpage/userpage.component';
+import { ImageComponent } from './userpage/image/image.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { environment } from '../environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 @NgModule({
   declarations: [
     AppComponent,
+    ImageComponent,
+    UserpageComponent,
     SmsSendComponent,
     PostListComponent,
     DropdownDirective,
@@ -45,6 +53,9 @@ import {MatDialogModule} from '@angular/material/dialog';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireStorageModule,
+    AngularFireDatabaseModule,
     NgbPaginationModule,
     NgbAlertModule,
     MatExpansionModule,
