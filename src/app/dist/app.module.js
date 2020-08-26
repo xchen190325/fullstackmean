@@ -28,6 +28,13 @@ var toolbar_1 = require("@angular/material/toolbar");
 var button_1 = require("@angular/material/button");
 var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
 var auth2_component_1 = require("./auth/auth2.component");
+var comment_create_component_1 = require("./news/comments/comment-create/comment-create.component");
+var input_1 = require("@angular/material/input");
+var form_field_1 = require("@angular/material/form-field");
+var comment_list_component_1 = require("./news/comments/comment-list/comment-list.component");
+var expansion_1 = require("@angular/material/expansion");
+var post_create_component_1 = require("./news/posts/post-create/post-create.component");
+var post_list_component_1 = require("./news/posts/post-list/post-list.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -35,17 +42,23 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 app_component_1.AppComponent,
+                post_list_component_1.PostListComponent,
                 auth2_component_1.AuthTwoComponent,
                 dropdown_directive_1.DropdownDirective,
                 auth_component_1.AuthComponent,
                 loading_spinner_component_1.LoadingSpinnerComponent,
-                news_component_1.AppNewsComponent
+                news_component_1.AppNewsComponent,
+                comment_create_component_1.CommentCreateComponent,
+                comment_list_component_1.CommentListComponent,
+                post_create_component_1.PostCreateComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
                 ng_bootstrap_1.NgbPaginationModule,
                 ng_bootstrap_1.NgbAlertModule,
+                expansion_1.MatExpansionModule,
                 button_1.MatButtonModule,
+                form_field_1.MatFormFieldModule,
                 forms_1.FormsModule,
                 forms_1.ReactiveFormsModule,
                 http_1.HttpClientModule,
@@ -53,10 +66,12 @@ var AppModule = /** @class */ (function () {
                 animations_1.BrowserAnimationsModule,
                 slider_1.MatSliderModule,
                 card_1.MatCardModule,
+                input_1.MatInputModule,
                 icon_1.MatIconModule,
                 menu_1.MatMenuModule,
                 sidenav_1.MatSidenavModule,
                 list_1.MatListModule,
+                animations_1.BrowserAnimationsModule,
                 toolbar_1.MatToolbarModule
             ],
             providers: [],

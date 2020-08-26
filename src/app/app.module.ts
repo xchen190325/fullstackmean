@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
+import { matMenuAnimations, MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -20,23 +20,33 @@ import { MatButtonModule } from '@angular/material/button';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 import { AuthTwoComponent } from './auth/auth2.component';
 import { CommentCreateComponent } from './news/comments/comment-create/comment-create.component';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { CommentListComponent } from './news/comments/comment-list/comment-list.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { PostCreateComponent } from './news/posts/post-create/post-create.component';
+import { PostListComponent } from './news/posts/post-list/post-list.component'
 @NgModule({
   declarations: [
     AppComponent,
+    PostListComponent,
     AuthTwoComponent,
     DropdownDirective,
     AuthComponent,
     LoadingSpinnerComponent,
     AppNewsComponent,
-    CommentCreateComponent
+    CommentCreateComponent,
+    CommentListComponent,
+    PostCreateComponent
     
   ],
   imports: [
     BrowserModule,
     NgbPaginationModule,
     NgbAlertModule,
+    MatExpansionModule,
     MatButtonModule,
+    MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -44,10 +54,12 @@ import { CommentCreateComponent } from './news/comments/comment-create/comment-c
     BrowserAnimationsModule,
     MatSliderModule,
     MatCardModule,
+    MatInputModule,
     MatIconModule,
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
+    BrowserAnimationsModule,
     MatToolbarModule
     
     
