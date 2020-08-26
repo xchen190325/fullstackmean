@@ -15,7 +15,7 @@ export class AppNewsComponent {
 	mArticles:Array<any>;
 	mSources:Array<any>;
 	willComment:boolean = false;
-
+	likeCount: number = 0;
 
 	constructor(private newsapi: NewsApiService,
 		private authService: AuthService,
@@ -35,6 +35,10 @@ export class AppNewsComponent {
       console.log(!user);
       console.log(!!user);
     });
+	}
+	onCount() { 
+		this.likeCount++;
+		return this.likeCount;
 	}
 	onComment() { 
 		if (this.willComment) {

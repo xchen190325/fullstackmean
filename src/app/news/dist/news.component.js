@@ -15,6 +15,7 @@ var AppNewsComponent = /** @class */ (function () {
         this.route = route;
         this.isAuthenticated = false;
         this.willComment = false;
+        this.likeCount = 0;
         console.log('app component constructor called');
     }
     AppNewsComponent.prototype.printcon = function () {
@@ -31,6 +32,10 @@ var AppNewsComponent = /** @class */ (function () {
             console.log(!user);
             console.log(!!user);
         });
+    };
+    AppNewsComponent.prototype.onCount = function () {
+        this.likeCount++;
+        return this.likeCount;
     };
     AppNewsComponent.prototype.onComment = function () {
         if (this.willComment) {
