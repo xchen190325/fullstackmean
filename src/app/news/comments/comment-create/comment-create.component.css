@@ -31,6 +31,34 @@ body {
     margin: 100px auto 10px;
     overflow: hidden;
 }
+
+mat-card {
+    z-index: 15;
+    position: relative;
+    background: #fff;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+    box-sizing: border-box;
+    margin: 100px auto 10px;
+    overflow: hidden;
+}
+.mat-raised-button{
+
+    outline: none;
+    background: #4285f4;
+    width: 100%;
+    border: 0;
+    border-radius: 4px;
+    padding: 12px 20px;
+    color: #fff;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    line-height: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+}
 .form-toggle {
     z-index: 10;
     position: absolute;
@@ -75,6 +103,17 @@ body {
 }
 .form-group:last-child {
     margin: 0;
+}
+mat-card label{
+
+    display: block;
+    margin: 0 0 10px;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
 }
 .form-group label {
     display: block;

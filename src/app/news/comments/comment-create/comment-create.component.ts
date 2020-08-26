@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommentCreateComponent implements OnInit {
 
+  
+
   newPost = '';
-  onAddPost(input:string) { 
-    this.newPost = 'input,hello world'; 
+  enteredValue = '';
+
+  onAddPost() { 
+    this.newPost = this.enteredValue
   }
   constructor() { }
 

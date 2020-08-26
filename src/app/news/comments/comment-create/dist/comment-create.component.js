@@ -11,9 +11,10 @@ var core_1 = require("@angular/core");
 var CommentCreateComponent = /** @class */ (function () {
     function CommentCreateComponent() {
         this.newPost = '';
+        this.enteredValue = '';
     }
-    CommentCreateComponent.prototype.onAddPost = function (input) {
-        this.newPost = 'input,hello world';
+    CommentCreateComponent.prototype.onAddPost = function () {
+        this.newPost = this.enteredValue;
     };
     CommentCreateComponent.prototype.ngOnInit = function () {
     };
