@@ -11,10 +11,14 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var auth_component_1 = require("./auth/auth.component");
 var news_component_1 = require("./news/news.component");
+var auth2_component_1 = require("./auth/auth2.component");
+var comment_create_component_1 = require("./news/comments/comment-create/comment-create.component");
 var appRoutes = [
-    { path: '', component: auth_component_1.AuthComponent },
+    { path: 'auth', component: auth_component_1.AuthComponent },
     { path: 'news', component: news_component_1.AppNewsComponent },
-    { path: 'login', component: auth_component_1.AuthComponent }
+    { path: 'login', component: auth_component_1.AuthComponent },
+    { path: 'authtwo', component: auth2_component_1.AuthTwoComponent },
+    { path: 'post', component: comment_create_component_1.CommentCreateComponent }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

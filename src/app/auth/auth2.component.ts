@@ -7,10 +7,10 @@ import { AuthService, AuthResponseData } from './auth.service';
 
 @Component({
   selector: 'app-auth',
-  templateUrl: './auth.component.html',
-  styleUrls:['./auth.component.css']
+  templateUrl: './auth2.component.html',
+  styleUrls:['./auth2.component.css']
 })
-export class AuthComponent {
+export class AuthTwoComponent {
   isLoginMode = true;
   isLoading = false;
   error: string = null;

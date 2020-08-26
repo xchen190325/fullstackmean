@@ -6,14 +6,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.HeaderComponent = void 0;
+exports.HeadersComponent = void 0;
 var core_1 = require("@angular/core");
-var HeaderComponent = /** @class */ (function () {
-    function HeaderComponent(authService) {
+var HeadersComponent = /** @class */ (function () {
+    function HeadersComponent(authService) {
         this.authService = authService;
         this.isAuthenticated = false;
     }
-    HeaderComponent.prototype.ngOnInit = function () {
+    HeadersComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.userSub = this.authService.user.subscribe(function (user) {
             _this.isAuthenticated = !!user;
@@ -21,18 +21,18 @@ var HeaderComponent = /** @class */ (function () {
             console.log(!!user);
         });
     };
-    HeaderComponent.prototype.onLogout = function () {
+    HeadersComponent.prototype.onLogout = function () {
         this.authService.logout();
     };
-    HeaderComponent.prototype.ngOnDestroy = function () {
+    HeadersComponent.prototype.ngOnDestroy = function () {
         this.userSub.unsubscribe();
     };
-    HeaderComponent = __decorate([
+    HeadersComponent = __decorate([
         core_1.Component({
-            selector: 'app-header',
+            selector: 'app-headers',
             templateUrl: './header.component.html'
         })
-    ], HeaderComponent);
-    return HeaderComponent;
+    ], HeadersComponent);
+    return HeadersComponent;
 }());
-exports.HeaderComponent = HeaderComponent;
+exports.HeadersComponent = HeadersComponent;

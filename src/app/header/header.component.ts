@@ -3,10 +3,10 @@ import { Subscription } from 'rxjs';
 import { AuthService } from '../auth/auth.service';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-headers',
   templateUrl: './header.component.html'
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class HeadersComponent implements OnInit, OnDestroy {
   isAuthenticated = false;
   private userSub: Subscription;
 

@@ -12,7 +12,6 @@ var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/common/http");
 var app_component_1 = require("./app.component");
-var header_component_1 = require("./header/header.component");
 var dropdown_directive_1 = require("./shared/dropdown.directive");
 var app_routing_module_1 = require("./app-routing.module");
 var auth_component_1 = require("./auth/auth.component");
@@ -27,6 +26,8 @@ var sidenav_1 = require("@angular/material/sidenav");
 var list_1 = require("@angular/material/list");
 var toolbar_1 = require("@angular/material/toolbar");
 var button_1 = require("@angular/material/button");
+var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
+var auth2_component_1 = require("./auth/auth2.component");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -34,7 +35,7 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 app_component_1.AppComponent,
-                header_component_1.HeaderComponent,
+                auth2_component_1.AuthTwoComponent,
                 dropdown_directive_1.DropdownDirective,
                 auth_component_1.AuthComponent,
                 loading_spinner_component_1.LoadingSpinnerComponent,
@@ -42,6 +43,8 @@ var AppModule = /** @class */ (function () {
             ],
             imports: [
                 platform_browser_1.BrowserModule,
+                ng_bootstrap_1.NgbPaginationModule,
+                ng_bootstrap_1.NgbAlertModule,
                 button_1.MatButtonModule,
                 forms_1.FormsModule,
                 forms_1.ReactiveFormsModule,
