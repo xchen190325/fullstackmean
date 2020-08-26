@@ -14,15 +14,17 @@ export class AppNewsComponent {
   private userSub: Subscription;
 	mArticles:Array<any>;
 	mSources:Array<any>;
-	
+	willComment:boolean = false;
 
-	
+
 	constructor(private newsapi: NewsApiService,
 		private authService: AuthService,
 		private route:Router) {
 		console.log('app component constructor called');         
 	}
-
+	printcon() { 
+		console.log('hello world')
+	}
 	ngOnInit() {
         //load articles
 	    this.newsapi.initArticles().subscribe(data => this.mArticles = data['articles']);
@@ -34,7 +36,16 @@ export class AppNewsComponent {
       console.log(!!user);
     });
 	}
-	
+	onComment() { 
+		if (this.willComment) {
+			this.willComment = false;
+		} else { 
+			this.willComment = true;
+		}
+		
+		console.log(this.willComment);
+	};
+
 	onLogin() { 
 		this.route.navigate(['auth'])
 	}

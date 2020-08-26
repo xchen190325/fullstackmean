@@ -39,10 +39,17 @@
       </p>
     </mat-card-content>
     <mat-card-actions class="action-buttons">
+      <app-post-list></app-post-list>
       <button mat-button color="primary"><mat-icon>thumb_up_alt</mat-icon> 12 Likes</button>
-      <button mat-button color="primary"><mat-icon>comment</mat-icon> Comments</button>
+      <button mat-button color="primary" (click)="onComment()"><mat-icon>comment</mat-icon> Comments</button>
       <button mat-button color="primary"><mat-icon>share</mat-icon> Share</button>
       <a mat-button color="primary" href={{article.url}} target="_blank" ><mat-icon>visibility</mat-icon> More</a>
+    
+      <!-- <app-comment-create *ngIf="willComment"></app-comment-create> -->
+      
+      <app-post-create *ngIf="willComment"></app-post-create>
     </mat-card-actions>
   </mat-card>
+  
 </mat-sidenav-container>
+

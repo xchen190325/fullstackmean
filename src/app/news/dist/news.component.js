@@ -14,8 +14,12 @@ var AppNewsComponent = /** @class */ (function () {
         this.authService = authService;
         this.route = route;
         this.isAuthenticated = false;
+        this.willComment = false;
         console.log('app component constructor called');
     }
+    AppNewsComponent.prototype.printcon = function () {
+        console.log('hello world');
+    };
     AppNewsComponent.prototype.ngOnInit = function () {
         var _this = this;
         //load articles
@@ -28,6 +32,16 @@ var AppNewsComponent = /** @class */ (function () {
             console.log(!!user);
         });
     };
+    AppNewsComponent.prototype.onComment = function () {
+        if (this.willComment) {
+            this.willComment = false;
+        }
+        else {
+            this.willComment = true;
+        }
+        console.log(this.willComment);
+    };
+    ;
     AppNewsComponent.prototype.onLogin = function () {
         this.route.navigate(['auth']);
     };
