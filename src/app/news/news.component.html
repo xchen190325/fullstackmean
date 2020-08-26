@@ -3,7 +3,7 @@
   <span><a routerLink="./news" >News</a></span>  
   <span><a routerLink="./news" *ngIf="isAuthenticated">Profile</a></span>  
   <span class="example-spacer"></span>
-  <span><a (click)="onLogin()">Login</a></span>
+  <span><a (click)="onLogin()" *ngIf="!isAuthenticated">Login</a></span>
   <span *ngIf="isAuthenticated"
   ><a style="cursor: pointer;" (click)="onLogout()">Logout</a></span>
 
@@ -39,7 +39,7 @@
       </p>
     </mat-card-content>
     <mat-card-actions class="action-buttons">
-      <app-post-list></app-post-list>
+      <app-post-list *ngIf="willComment"></app-post-list>
       <button mat-button color="primary"><mat-icon>thumb_up_alt</mat-icon> 12 Likes</button>
       <button mat-button color="primary" (click)="onComment()"><mat-icon>comment</mat-icon> Comments</button>
       <button mat-button color="primary"><mat-icon>share</mat-icon> Share</button>

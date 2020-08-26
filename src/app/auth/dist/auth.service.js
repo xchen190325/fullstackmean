@@ -32,7 +32,7 @@ var AuthService = /** @class */ (function () {
     AuthService.prototype.login = function (email, password) {
         var _this = this;
         return this.http
-            .post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyDb0xTaRAoxyCgvaDF3kk5VYOsTwB_3o7Y', {
+            .post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=AIzaSyC7gY1NwbP1_VUlBo5eXsqNFcXq7VS8s8M', {
             email: email,
             password: password,
             returnSecureToken: true

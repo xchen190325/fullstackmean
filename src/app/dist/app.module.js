@@ -27,7 +27,6 @@ var list_1 = require("@angular/material/list");
 var toolbar_1 = require("@angular/material/toolbar");
 var button_1 = require("@angular/material/button");
 var ng_bootstrap_1 = require("@ng-bootstrap/ng-bootstrap");
-var auth2_component_1 = require("./auth/auth2.component");
 var comment_create_component_1 = require("./news/comments/comment-create/comment-create.component");
 var input_1 = require("@angular/material/input");
 var form_field_1 = require("@angular/material/form-field");
@@ -43,7 +42,6 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 app_component_1.AppComponent,
                 post_list_component_1.PostListComponent,
-                auth2_component_1.AuthTwoComponent,
                 dropdown_directive_1.DropdownDirective,
                 auth_component_1.AuthComponent,
                 loading_spinner_component_1.LoadingSpinnerComponent,

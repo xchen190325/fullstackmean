@@ -18,7 +18,6 @@ import { MatListModule } from '@angular/material/list';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
-import { AuthTwoComponent } from './auth/auth2.component';
 import { CommentCreateComponent } from './news/comments/comment-create/comment-create.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -30,7 +29,6 @@ import { PostListComponent } from './news/posts/post-list/post-list.component'
   declarations: [
     AppComponent,
     PostListComponent,
-    AuthTwoComponent,
     DropdownDirective,
     AuthComponent,
     LoadingSpinnerComponent,
