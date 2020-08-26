@@ -24,13 +24,18 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { CommentListComponent } from './news/comments/comment-list/comment-list.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { PostCreateComponent } from './news/posts/post-create/post-create.component';
-import { PostListComponent } from './news/posts/post-list/post-list.component'
+import { PostListComponent } from './news/posts/post-list/post-list.component';
+import { SmsSendComponent } from './sms-send/sms-send.component'
+import { DialogOverviewExampleDialog } from './sms-send/sms-send.component';
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
+    SmsSendComponent,
     PostListComponent,
     DropdownDirective,
     AuthComponent,
+    DialogOverviewExampleDialog,
     LoadingSpinnerComponent,
     AppNewsComponent,
     CommentCreateComponent,
@@ -44,6 +49,7 @@ import { PostListComponent } from './news/posts/post-list/post-list.component'
     NgbAlertModule,
     MatExpansionModule,
     MatButtonModule,
+    MatDialogModule,
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
@@ -64,6 +70,7 @@ import { PostListComponent } from './news/posts/post-list/post-list.component'
   ],
   providers: [
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [DialogOverviewExampleDialog]
 })
 export class AppModule {}

@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Send via SMS {{data.name}}</h1>
+<div mat-dialog-content>
+  <p>Enter your phone number?</p>
+  <mat-form-field>
+    <mat-label>5556667777</mat-label>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Send</button>
+</div>

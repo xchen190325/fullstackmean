@@ -34,6 +34,9 @@ var comment_list_component_1 = require("./news/comments/comment-list/comment-lis
 var expansion_1 = require("@angular/material/expansion");
 var post_create_component_1 = require("./news/posts/post-create/post-create.component");
 var post_list_component_1 = require("./news/posts/post-list/post-list.component");
+var sms_send_component_1 = require("./sms-send/sms-send.component");
+var sms_send_component_2 = require("./sms-send/sms-send.component");
+var dialog_1 = require("@angular/material/dialog");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -41,9 +44,11 @@ var AppModule = /** @class */ (function () {
         core_1.NgModule({
             declarations: [
                 app_component_1.AppComponent,
+                sms_send_component_1.SmsSendComponent,
                 post_list_component_1.PostListComponent,
                 dropdown_directive_1.DropdownDirective,
                 auth_component_1.AuthComponent,
+                sms_send_component_2.DialogOverviewExampleDialog,
                 loading_spinner_component_1.LoadingSpinnerComponent,
                 news_component_1.AppNewsComponent,
                 comment_create_component_1.CommentCreateComponent,
@@ -56,6 +61,7 @@ var AppModule = /** @class */ (function () {
                 ng_bootstrap_1.NgbAlertModule,
                 expansion_1.MatExpansionModule,
                 button_1.MatButtonModule,
+                dialog_1.MatDialogModule,
                 form_field_1.MatFormFieldModule,
                 forms_1.FormsModule,
                 forms_1.ReactiveFormsModule,
@@ -73,7 +79,8 @@ var AppModule = /** @class */ (function () {
                 toolbar_1.MatToolbarModule
             ],
             providers: [],
-            bootstrap: [app_component_1.AppComponent]
+            bootstrap: [app_component_1.AppComponent],
+            entryComponents: [sms_send_component_2.DialogOverviewExampleDialog]
         })
     ], AppModule);
     return AppModule;
